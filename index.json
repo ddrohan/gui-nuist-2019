@@ -160,11 +160,11 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-01",
+  "title" : "HelloWorld",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>Here we discuss how to install and set up effective tools for Android application development. These include the Android Studio IDE  + an emulator. We&#39;ll also create a simple Android App (HelloWorld), and be able to manage it within the Android Studio environment.</p>",
-  "folder" : "book-a-lab-01",
+  "folder" : "book-ahelloworld-lab-01",
   "link" : "index.html",
   "los": [
    ]
