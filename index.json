@@ -57,22 +57,6 @@
   "los": [
    ]
 
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "App Design ",
-  "img" : "01.app.design.jpeg",
-  "videoid" : "none",
-  "objectives" : "<p>Here we discuss app design in general, the frameworks available to the app developer and the different approaches that can be followed in the design and development of a mobile app.</p>",
-  "folder" : "talk-2-app-design",
-  "link" : "01.app.design.pdf",
-  "los": [
-   ]
-
     } 
    ]
 
@@ -86,7 +70,7 @@
     "properties" : {},
   
   "type" : "topic",
-  "title" : "Overview & Tools ",
+  "title" : "Week 01 - Overview & Tools ",
   "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>In this section we take a first look at Android, it&#39;s User Interface and the major components that make up an Android application. When you&#39;re finished this section you should be familiar with the Android ecosystem, be aware of the major Android application components, be able to build a simple Android app and be able to deploy an Android app to an emulator and run/test it</p>",
@@ -129,27 +113,11 @@
   
   "type" : "talk",
   "title" : "Android Anatomy ",
-  "img" : "02.anatomy.jpg",
+  "img" : "anatomy.jpg",
   "videoid" : "none",
   "objectives" : "<p>Here we take a closer look at the Android eco-system and the components that make up this system. We are particularly interested in both the android activity and fragment life-cycles and the android components that we utilise to build an android app.</p>",
   "folder" : "talk-2-android-anatomy",
-  "link" : "02.anatomy.pdf",
-  "los": [
-   ]
-
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "Donation - A First Look" ",
-  "img" : "03.first.android.app.png",
-  "videoid" : "none",
-  "objectives" : "<p>The first application exhibits a range of new concepts you will not have come across before. Here we tour this app in detail, exploring each of the artifacts we have composed, and attempt to get a sense of how they fit together to form a running app.</p>",
-  "folder" : "talk-3-first-android-app",
-  "link" : "03.first.android.app.pdf",
+  "link" : "anatomy.pdf",
   "los": [
    ]
 
@@ -185,22 +153,6 @@
   "los": [
    ]
 
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "video",
-  "title" : "Using Android Studio ",
-  "img" : "",
-  "videoid" : "Z98hXV9GmzY",
-  "objectives" : "<p>A Quick YouTube video introducing Android Studio and how to use it to develop Android Apps.</p>",
-  "folder" : "video-1-android-studio",
-  "link" : "Z98hXV9GmzY",
-  "los": [
-   ]
-
     } 
    ]
 
@@ -227,29 +179,13 @@
     "properties" : {},
   
   "type" : "unit",
-  "title" : "Activities & Navigation ",
-  "img" : "talk-4-ui-overview/overview.png",
+  "title" : "Week 02 - Activities & Navigation ",
+  "img" : "talk-5-activities-layouts/activities-layouts.png",
   "videoid" : "",
   "objectives" : "",
   "folder" : "unit-1",
   "link" : "index.html",
   "los": [
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "Android UX ",
-  "img" : "overview.png",
-  "videoid" : "none",
-  "objectives" : "<p>Android introduced a new user interface language to the world, one that is gradually evolving in flexibility and expressiveness. Here we review the principle elements of this language and how its is incorporated into attractive and usable applications</p>",
-  "folder" : "talk-4-ui-overview",
-  "link" : "overview.pdf",
-  "los": [
-   ]
-
-    } ,
    {
     
   
@@ -262,70 +198,6 @@
   "objectives" : "<p>Android, like IOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. Here we review some of the major elements of this language and become acquainted with the some of the primary interaction patterns.</p>",
   "folder" : "talk-5-activities-layouts",
   "link" : "activities-layouts.pdf",
-  "los": [
-   ]
-
-    } ,
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "lab",
-  "title" : "Lab-03",
-  "img" : "img/main.png",
-  "videoid" : "none",
-  "objectives" : "<p>In this Lab, you will be required to build the second version of our Donation Case Study App, called <b>Donation.2.0</b>. Here, we introduce some simple menu handling and evolve the Donation Android app to include a Report view. We also make use of a simple ArrayAdapter to display donation data in our Report.</p>",
-  "folder" : "book-a-donation-02",
-  "link" : "index.html",
-  "los": [
-   ]
-
-    } 
-   ]
-
-    } 
-   ]
-
-  },
- {
-    
-  
-    "properties" : {},
-  
-  "type" : "topic",
-  "title" : "Data Models, App Structure & Design ",
-  "img" : "topic.png",
-  "videoid" : "",
-  "objectives" : "<p>This first application is already composed of a range of classes related to each other via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new version of the app though which we will explore the major features of the SDK.</p>",
-  "folder" : "topic03-app-structure",
-  "link" : "index.html",
-  "los": [
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "unit",
-  "title" : "Data Models, App Structure & Design ",
-  "img" : "talk-6-app-structure/app-structure.png",
-  "videoid" : "",
-  "objectives" : "",
-  "folder" : "unit-1",
-  "link" : "index.html",
-  "los": [
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "Application Structure ",
-  "img" : "app-structure.png",
-  "videoid" : "none",
-  "objectives" : "<p>This simple application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app.</p>",
-  "folder" : "talk-6-app-structure",
-  "link" : "app-structure.pdf",
   "los": [
    ]
 
@@ -352,11 +224,27 @@
     "properties" : {},
   
   "type" : "lab",
+  "title" : "Lab-03",
+  "img" : "img/main.png",
+  "videoid" : "none",
+  "objectives" : "<p>In this Lab, you will be required to build the second version of our Donation Case Study App, called <b>Donation.2.0</b>. Here, we introduce some simple menu handling and evolve the Donation Android app to include a Report view. We also make use of a simple ArrayAdapter to display donation data in our Report.</p>",
+  "folder" : "book-a-donation-02",
+  "link" : "index.html",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "lab",
   "title" : "Lab-04",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In this version of our Donation Case Study App, called <b>Donation.3.0</b> we evolve the Donation Android app to include a Donation Object Model and Base class. We also use a CustomAdapter in the Report View and refactor our menus with xml driven event handling.</p>",
-  "folder" : "book-a-donation-03",
+  "folder" : "book-b-donation-03",
   "link" : "index.html",
   "los": [
    ]
@@ -374,11 +262,11 @@
     "properties" : {},
   
   "type" : "topic",
-  "title" : "Data Persistence in Android ",
+  "title" : "Week 03 - Data Persistence in Android ",
   "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>This first application is already composed of a range of classes related to each other via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new version of the app though which we will explore the major features of the SDK.</p>",
-  "folder" : "topic04-persistence",
+  "folder" : "topic03-persistence",
   "link" : "index.html",
   "los": [
    {
@@ -388,28 +276,12 @@
   
   "type" : "unit",
   "title" : "File Formats ",
-  "img" : "talk-8-file-formats/fileformats.png",
+  "img" : "talk-8-jsonfileio-donation/jsonfileio.png",
   "videoid" : "",
   "objectives" : "",
   "folder" : "unit-1",
   "link" : "index.html",
   "los": [
-   {
-    
-  
-    "properties" : {},
-  
-  "type" : "talk",
-  "title" : "File Formats ",
-  "img" : "fileformats.png",
-  "videoid" : "none",
-  "objectives" : "<p>Here we briefly review examples of a number of different type of file formats and focus on JSON and XML, as these file types are often used in Android for persisting data.</p>",
-  "folder" : "talk-8-file-formats",
-  "link" : "fileformats.pdf",
-  "los": [
-   ]
-
-    } ,
    {
     
   
@@ -534,6 +406,134 @@
   "objectives" : "<p>In <b>Donation.4.0.Realm</b> you will again build on the previous lab and add in some new features and Database Support, and an Application Object. It&#39;s actually very similar to <b>Donation.4.0</b>, but with Realm support, the code base is reduced substantially.</p>",
   "folder" : "book-b-donation-realm",
   "link" : "index.html",
+  "los": [
+   ]
+
+    } 
+   ]
+
+    } 
+   ]
+
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
+  "title" : "Supplementary Material ",
+  "img" : "topic.png",
+  "videoid" : "",
+  "objectives" : "<p>Here you can find some presentations that we didn&#39;t get a chance to cover during the module. They&#39;re not critical, but would be worth a read if you are unfamiliar with the Android World.</p>",
+  "folder" : "topic04-supplementary",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "unit",
+  "title" : "Supplementary Material ",
+  "img" : "talk-1-app-design/01.app.design.jpeg",
+  "videoid" : "",
+  "objectives" : "<p>Here you can find some presentations that we didn&#39;t get a chance to cover during the module. They&#39;re not critical, but would be worth a read if you are unfamiliar with the Android World.</p>",
+  "folder" : "unit-1",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "App Design ",
+  "img" : "01.app.design.jpeg",
+  "videoid" : "none",
+  "objectives" : "<p>Here we discuss app design in general, the frameworks available to the app developer and the different approaches that can be followed in the design and development of a mobile app.</p>",
+  "folder" : "talk-1-app-design",
+  "link" : "01.app.design.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Donation - A First Look' ",
+  "img" : "03.first.android.app.png",
+  "videoid" : "none",
+  "objectives" : "<p>The first application exhibits a range of new concepts you will not have come across before. Here we tour this app in detail, exploring each of the artifacts we have composed, and attempt to get a sense of how they fit together to form a running app.</p>",
+  "folder" : "talk-2-first-android-app",
+  "link" : "03.first.android.app.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Android UX ",
+  "img" : "overview.png",
+  "videoid" : "none",
+  "objectives" : "<p>Android introduced a new user interface language to the world, one that is gradually evolving in flexibility and expressiveness. Here we review the principle elements of this language and how its is incorporated into attractive and usable applications</p>",
+  "folder" : "talk-3-ui-overview",
+  "link" : "overview.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Application Structure ",
+  "img" : "app-structure.png",
+  "videoid" : "none",
+  "objectives" : "<p>This simple application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app.</p>",
+  "folder" : "talk-4-app-structure",
+  "link" : "app-structure.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "File Formats ",
+  "img" : "fileformats.png",
+  "videoid" : "none",
+  "objectives" : "<p>Here we briefly review examples of a number of different type of file formats and focus on JSON and XML, as these file types are often used in Android for persisting data.</p>",
+  "folder" : "talk-5-file-formats",
+  "link" : "fileformats.pdf",
+  "los": [
+   ]
+
+    } ,
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "video",
+  "title" : "Using Android Studio ",
+  "img" : "",
+  "videoid" : "Z98hXV9GmzY",
+  "objectives" : "<p>A Quick YouTube video introducing Android Studio and how to use it to develop Android Apps.</p>",
+  "folder" : "video-1-android-studio",
+  "link" : "Z98hXV9GmzY",
   "los": [
    ]
 
