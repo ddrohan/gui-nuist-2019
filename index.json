@@ -166,7 +166,7 @@
     "properties" : {},
   
   "type" : "topic",
-  "title" : "Activities & Navigation ",
+  "title" : "Week 02 - Activities & Navigation ",
   "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>Android, like iOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. In the second version of the Donation app we start to get a sense of this language and the programming paradigms to support it.</p>",
@@ -262,7 +262,7 @@
     "properties" : {},
   
   "type" : "topic",
-  "title" : "Week 03 - Data Persistence in Android ",
+  "title" : "Week 03 - Data Persistence ",
   "img" : "topic.png",
   "videoid" : "",
   "objectives" : "<p>This first application is already composed of a range of classes related to each other via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new version of the app though which we will explore the major features of the SDK.</p>",
