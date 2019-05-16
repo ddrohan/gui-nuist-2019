@@ -144,11 +144,11 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-02",
+  "title" : "Lab-01",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In this Lab, you will be required to build the first version of our Donation Case Study App, called <b>Donation.1.0</b>. Here, we will add in a few UI widgets on a single layout and implement some basic event handling.</p>",
-  "folder" : "book-b-lab-02",
+  "folder" : "book-b-lab-01",
   "link" : "index.html",
   "los": [
    ]
@@ -224,7 +224,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-03",
+  "title" : "Lab-02",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In this Lab, you will be required to build the second version of our Donation Case Study App, called <b>Donation.2.0</b>. Here, we introduce some simple menu handling and evolve the Donation Android app to include a Report view. We also make use of a simple ArrayAdapter to display donation data in our Report.</p>",
@@ -240,7 +240,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-04",
+  "title" : "Lab-03",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In this version of our Donation Case Study App, called <b>Donation.3.0</b> we evolve the Donation Android app to include a Donation Object Model and Base class. We also use a CustomAdapter in the Report View and refactor our menus with xml driven event handling.</p>",
@@ -304,7 +304,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-05",
+  "title" : "Lab-04",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In <b>Donation.3.1</b> you will build on the previous lab and add in some new features and JSON File Support, and an Application Object. On completion of this lab you&#39;ll be able to add File Handling using JSON to an Android Application and work with an &#39;Application&#39; object.</p>",
@@ -384,7 +384,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-06",
+  "title" : "Lab-05",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In <b>Donation.4.0</b> you will build on the previous lab and add in some new features and Database Support, and an Application Object. On completion of this lab you&#39;ll be able to add Database Support to an Android Application and work with an &#39;Application&#39; object.</p>",
@@ -400,7 +400,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-07",
+  "title" : "Lab-06",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In <b>Donation.4.0.Realm</b> you will again build on the previous lab and add in some new features and Database Support, and an Application Object. It&#39;s actually very similar to <b>Donation.4.0</b>, but with Realm support, the code base is reduced substantially.</p>",

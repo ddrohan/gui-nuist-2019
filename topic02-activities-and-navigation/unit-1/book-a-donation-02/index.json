@@ -7,7 +7,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-03",
+  "title" : "Lab-02",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In this Lab, you will be required to build the second version of our Donation Case Study App, called <b>Donation.2.0</b>. Here, we introduce some simple menu handling and evolve the Donation Android app to include a Report view. We also make use of a simple ArrayAdapter to display donation data in our Report.</p>",
@@ -20,7 +20,7 @@
   
     {
     "title": "#Objectives",
-    "shortTitle": "Lab-03",
+    "shortTitle": "Lab-02",
     "contentMd" : "#Objectives\n\nIn this Lab, you will be required to build the second version of our Donation Case Study App, called <b>Donation.2.0</b>. Here, we introduce some simple menu handling and evolve the Donation Android app to include a Report view. We also make use of a simple ArrayAdapter to display donation data in our Report.\n\n<b>NOTE : These Labs we build in a previous Version to Android Studio 3.0 so be aware that some images and instructions may not be up to date. Also, when replacing any XML with that from the Lab, the Widgets will not be 'anchored' so it would be advisable to go ahead and 'anchor' your widgets to improve the future design of your layouts.</b>\n"
     },
   

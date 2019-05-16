@@ -7,7 +7,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-05",
+  "title" : "Lab-04",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In <b>Donation.3.1</b> you will build on the previous lab and add in some new features and JSON File Support, and an Application Object. On completion of this lab you&#39;ll be able to add File Handling using JSON to an Android Application and work with an &#39;Application&#39; object.</p>",
@@ -20,7 +20,7 @@
   
     {
     "title": "#Objectives",
-    "shortTitle": "Lab-05",
+    "shortTitle": "Lab-04",
     "contentMd" : "#Objectives\n\nIn <b>Donation.3.1</b> you will build on the previous lab and add in some new features and JSON File Support, and an Application Object. On completion of this lab you'll be able to add File Handling using JSON to an Android Application and work with an 'Application' object. \n"
     },
   

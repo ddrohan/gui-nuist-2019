@@ -7,7 +7,7 @@
     "properties" : {},
   
   "type" : "lab",
-  "title" : "Lab-07",
+  "title" : "Lab-06",
   "img" : "img/main.png",
   "videoid" : "none",
   "objectives" : "<p>In <b>Donation.4.0.Realm</b> you will again build on the previous lab and add in some new features and Database Support, and an Application Object. It&#39;s actually very similar to <b>Donation.4.0</b>, but with Realm support, the code base is reduced substantially.</p>",
@@ -20,7 +20,7 @@
   
     {
     "title": "#Objectives",
-    "shortTitle": "Lab-07",
+    "shortTitle": "Lab-06",
     "contentMd" : "#Objectives\n\nIn <b>Donation.4.0.Realm</b> you will again build on the previous lab and add in some new features and Database Support, and an Application Object. It's actually very similar to <b>Donation.4.0</b>, but with Realm support, the code base is reduced substantially.\n"
     },
   
