@@ -35,10 +35,10 @@
     "properties" : {},
   
   "type" : "unit",
-  "title" : "topic",
+  "title" : "Module Overview & Background ",
   "img" : "talk-1-intro/intro.png",
   "videoid" : "",
-  "objectives" : "",
+  "objectives" : "<p>Here you&#39;ll find a brief talk about myself, my background and what this Module will cover in the different sections. It give a breakdown of the week-by-week topics to cover and a rough idea of what the C.A. will entail.</p>",
   "folder" : "unit-1",
   "link" : "index.html",
   "los": [
