@@ -7,10 +7,10 @@
     "properties" : {"highlightstyle":"railscasts","slack":null,"moodle":null,"youtube":null,"parent":"http://ddrohan.github.io/","courseurl":"http://ddrohan.github.io/gui-nuist-2019/","credits":"David Drohan, WIT","courseicon":"grey newspaper"},
   
   "type" : "course",
-  "title" : "GUI Development ",
+  "title" : "Mobile App Development ",
   "img" : "",
   "videoid" : "",
-  "objectives" : "<p>Welcome to the GUI Development Module. The primary objective of this course will be to provide a basic introduction to developing modern GUI Applications in Java through Android. It is delivered over 3 weeks. The course will comprise of a series of Talks + labs exploring the Android development ecosystem in increasing detail. Our objective is to provide the student with the skills required to construct a basic Android application. We assume a beginner level in Java.</p>",
+  "objectives" : "<p>Welcome to the Mobile App Development Module. The primary objective of this course will be to provide a basic introduction to developing modern GUI Applications in Java through Android and OO Programming Principle techniques. It is delivered over 3 weeks. The course will comprise of a series of Talks + labs exploring the Android development ecosystem in increasing detail. Our objective is to provide the student with the skills required to construct a basic Android application. We assume a beginner level in Java.</p>",
   "folder" : "gui-nuist-2019",
   "link" : "index.html",
   "los": [
