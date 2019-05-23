@@ -22,6 +22,38 @@
     "properties" : {},
   
   "type" : "topic",
+  "title" : "Assignments ",
+  "img" : "topic.png",
+  "videoid" : "",
+  "objectives" : "<p>Specification for the course assignments.</p>",
+  "folder" : "topic00",
+  "link" : "index.html",
+  "los": [
+   {
+    
+  
+    "properties" : {},
+  
+  "type" : "talk",
+  "title" : "Assignment-1  ",
+  "img" : "assignment-1.png",
+  "videoid" : "none",
+  "objectives" : "<p>A detailed specification of the Mobile Application Development first assignment. This comprises a standalone App.</p>",
+  "folder" : "talk-1-assignment-1",
+  "link" : "assignment-1.pdf",
+  "los": [
+   ]
+
+    } 
+   ]
+
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "topic",
   "title" : "Module Overview & Background ",
   "img" : "topic.png",
   "videoid" : "",
