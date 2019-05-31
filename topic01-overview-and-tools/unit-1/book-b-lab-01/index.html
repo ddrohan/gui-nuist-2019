@@ -379,9 +379,9 @@ html, body {
         
           <div class="ui tab segment lab" data-tab="03">
             <h1>Step 03 - The &#39;Donate&#39; Button</h1>
-<p>Place a button directly on to the activity - attached to the bottom of the screen as shown:</p>
+<p>Place a button directly on to the activity - an &#39;anchor&#39; to the screen as shown:</p>
 <p><img src="img/lab2s301.png" alt=""></p>
-<p>Following a similar procedure as in the previous step, rename the button and add an id, both called <b>donateButton</b> If all goes as expected, your xml files should be like this:</p>
+<p>Following a similar procedure as in the previous step, rename the button <strong>and add an id</strong>, both called <strong>donateButton</strong> If all goes as expected, your xml files should be like this:</p>
 <h2>content_donate.xml</h2>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
@@ -518,8 +518,7 @@ public class Donate extends AppCompatActivity {
 <p>For any &#39;controls&#39; a user can interact with we usually find it useful to associate a class member with that object. Currently we only have one - a Button. The text fields we don&#39;t consider &#39;interactive&#39; as such, so we will not include those.</p>
 <p>Insert the following new field into the class:</p>
 <pre><code class="lang-java">  private Button donateButton;</code></pre>
-<p>The class will have to be imported. The class name will always match the name in the Palette:</p>
-<p><img src="img/lab2s302.png" alt=""></p>
+<p>The class will have to be imported. The class name will always match the name on the &#39;layout&#39; widget.</p>
 <p>We are free to call the variable anything we like. However, in order to keep confusion to a minimum, always call the variable by the same name you used in the Outline view:</p>
 <p><img src="img/lab2s303.png" alt=""></p>
 <p>In <strong><em>onCreate()</em></strong> - we need to initialise this variable:</p>
@@ -599,7 +598,7 @@ public class Donate extends AppCompatActivity {
 <p>Enter the name and filter as below</p>
 <p><img src="img/lab2s305.png" alt=""></p>
 <p>and if you then select the filter, we should see our message:</p>
-<p><img src="img/lab2s306.png" alt=""></p>
+<p><img src="img/lab2s309.png" alt=""></p>
 <p>Run the app again, and verify the above message appears.</p>
 
           </div>
@@ -614,20 +613,19 @@ public class Donate extends AppCompatActivity {
 <p>The first is designed to be read though as a guide, perhaps independent of any work in Android Studio. You should get into the habit of devoting an hour or two a week just reading this section.</p>
 <p>The Reference guide should always be open as you are working on labs or projects, and you should make a serious effort to get to grips with at least some of the information here.</p>
 <p>Taking the <strong>Button</strong> class we have just started using. We can immediately find the reference just by knowing the import statement in our Activity class:</p>
-<pre><code>import android.widget.Button;</code></pre>
+<pre><code class="lang-java">import android.widget.Button;</code></pre>
 <p>.. translates to</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/Button.html">http://developer.android.com/reference/android/widget/Button.html</a></li>
 </ul>
 <p>(note the last three segments match the package name). Open this page now. Read just as far as the &quot;Button Style&quot; heading. There seems to be two ways of learning when an button event occurs. The first method is using the event handler/listener - but a second easier method is also available.</p>
 <p>Try this now. Bring in a new method into the <strong>Donate</strong> class:</p>
-<pre><code class="lang-java">  public void donateButtonPressed (View view)
-  {
+<pre><code class="lang-java">  public void donateButtonPressed (View view) {
     Log.v(&quot;Donate&quot;, &quot;Donate Pressed!&quot;);
-   }</code></pre>
-<p>Then, edit the <b>content_donate.xml</b> file - and add a new &#39;onClick&#39; <em>attribute</em> into the Button xml fragment:</p>
+  }</code></pre>
+<p>Then, edit the <strong><em>content_donate.xml</em></strong> file - and add a new &#39;onClick&#39; <em>attribute</em> into the Button xml fragment:</p>
 <pre><code class="lang-xml">android:onClick=&quot;donateButtonPressed&quot;</code></pre>
-<p>You can also add <b>donateButtonPressed</b> to the &#39;onClick&#39; attribute in Design View. And you end up with something like this:</p>
+<p>You can also add <strong>donateButtonPressed</strong> to the &#39;onClick&#39; attribute in Design View. And you end up with something like this:</p>
 <pre><code class="lang-xml">&lt;Button
       android:id=&quot;@+id/donateButton&quot;
       android:layout_width=&quot;wrap_content&quot;
@@ -646,7 +644,7 @@ public class Donate extends AppCompatActivity {
       app:layout_constraintTop_toTopOf=&quot;parent&quot;
       app:layout_constraintVertical_bias=&quot;0.903&quot; /&gt;</code></pre>
 <p>Save everything and execute the app, and monitor the log as you press the button:</p>
-<p><img src="img/lab2s401.png" alt=""></p>
+<p><img src="img/lab2s309.png" alt=""></p>
 <p>We now have our first interaction working!</p>
 
           </div>
@@ -655,16 +653,15 @@ public class Donate extends AppCompatActivity {
             <h1>Step 05 - New Control Layout</h1>
 <p>Recall the UI we are trying to implement:</p>
 <p><img src="img/completeappv1.png" alt=""></p>
-<p>We need radio buttons, some sort of selection/combo box + a progress bar. These can be found in various locations in the pallette:</p>
-<p><img src="img/lab2s107.png" alt="">
-<img src="img/lab2s501.png" alt="">
-<img src="img/lab2s502.png" alt=""></p>
-<p>RadioGroup, ProgressBar and NumberPicker seem likely candidates. The names of these controls are exactly as advertised, and we can expect them to be in the &#39;widgets&#39; package. To verify this, try importing them at the top of the <strong>Donate</strong> activity class:</p>
-<pre><code>import android.widget.RadioGroup;
+<p>We need radio buttons, some sort of selection/combo box + a progress bar. These can be found in various locations in the palette:</p>
+<p><img src="img/lab2s107.png" alt=""></p>
+<p><strong><em>RadioGroup</em></strong>, <strong><em>ProgressBar</em></strong> and <strong><em>NumberPicker</em></strong> seem likely candidates. The names of these controls are exactly as advertised, and we can expect them to be in the &#39;widgets&#39; package.</p>
+<p>To verify this, try importing them at the top of the <strong>Donate</strong> activity class:</p>
+<pre><code class="lang-java">import android.widget.RadioGroup;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;</code></pre>
 <p>... and we can bring in three fields into the class:</p>
-<pre><code>  private RadioGroup   paymentMethod;
+<pre><code class="lang-java">  private RadioGroup   paymentMethod;
   private ProgressBar  progressBar;
   private NumberPicker amountPicker;</code></pre>
 <p>We can also open up three pages of documentation - which we can reverse engineer from the package/class names:</p>
@@ -680,7 +677,7 @@ import android.widget.ProgressBar;</code></pre>
 <p>Getting the layout +id names as shown above may take some practice. However, it is an essential skill to get on top of, even it it takes a lot of trial and error.</p>
 <p>For reference purposes (try to do it yourself first!), these are the relevant generated xml files:</p>
 <h2>content_donate.xml</h2>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -822,7 +819,7 @@ import android.widget.ProgressBar;</code></pre>
 
 &lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
 <h2>strings.xml</h2>
-<pre><code>&lt;resources&gt;
+<pre><code class="lang-xml">&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
     &lt;string name=&quot;donateTitle&quot;&gt;Welcome Homer&lt;/string&gt;
@@ -832,11 +829,11 @@ import android.widget.ProgressBar;</code></pre>
     &lt;string name=&quot;direct&quot;&gt;Direct&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
 <p>If we have our naming conventions right - then we can bind to these new controls in <strong><em>onCreate()</em></strong>:</p>
-<pre><code>    paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-    progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-    amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);</code></pre>
+<pre><code class="lang-java">    paymentMethod = findViewById(R.id.paymentMethod);
+    progressBar   = findViewById(R.id.progressBar);
+    amountPicker  = findViewById(R.id.amountPicker);</code></pre>
 <p>This is the complete <strong>Donate</strong> class so far:</p>
-<pre><code>package ie.app;
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -882,9 +879,9 @@ public class Donate extends AppCompatActivity {
             Log.v(&quot;Donate&quot;, &quot;Really got the donate button&quot;);
         }
 
-        paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-        progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-        amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);
+        paymentMethod = findViewById(R.id.paymentMethod);
+        progressBar   = findViewById(R.id.progressBar);
+        amountPicker  = findViewById(R.id.amountPicker);
 
         amountPicker.setMinValue(0);
         amountPicker.setMaxValue(1000);
@@ -912,8 +909,7 @@ public class Donate extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void donateButtonPressed (View view)
-    {
+    public void donateButtonPressed (View view) {
         Log.v(&quot;Donate&quot;, &quot;Donate Pressed!&quot;);
     }
 }</code></pre>
@@ -946,11 +942,10 @@ public class Donate extends AppCompatActivity {
 <li><a href="http://developer.android.com/reference/android/widget/NumberPicker.html#getValue()">http://developer.android.com/reference/android/widget/NumberPicker.html#getValue()</a></li>
 </ul>
 <p>In <strong><em>onCreate()</em></strong>, initialise the values:</p>
-<pre><code>    amountPicker.setMinValue(0);
+<pre><code class="lang-java">    amountPicker.setMinValue(0);
     amountPicker.setMaxValue(1000);</code></pre>
 <p>And in <strong><em>donateButtonPressed()</em></strong>:</p>
-<pre><code>  public void donateButtonPressed (View view)
-  {
+<pre><code class="lang-java">  public void donateButtonPressed (View view) {
     int amount = amountPicker.getValue();
     Log.v(&quot;Donate&quot;, &quot;Donate Pressed! with amount &quot; + amount);
    }</code></pre>
