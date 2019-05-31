@@ -216,28 +216,24 @@ html, body {
         
           <div class="ui tab segment lab" data-tab="01">
             <h1>Step 01 - Create Project</h1>
-<p>Create a new Android application, as demonstrated in the following 5 screenshots:</p>
+<p>Create a new Android application, as demonstrated in the following screenshots:</p>
 <p><img src="img/firstrun.png" alt=""></p>
+<p>Make sure to choose the same project name and package as this will be used later on in the code.</p>
 <p><img src="img/lab2s101.png" alt=""></p>
+<p>You will now have a project structure like so:</p>
 <p><img src="img/lab2s102.png" alt=""></p>
-<p>Note the &#39;Minimum Required SDK&#39; which may be different from the default (as above).</p>
+<p>We need to rename some files, so first, select <strong><em>content_main</em></strong> remane like so - Right-Mouse-Click (RMC) Refactor-&gt;Rename</p>
 <p><img src="img/lab2s103.png" alt=""></p>
+<p>and rename to <strong><em>content_donate</em></strong>, like so, and choose <strong>Refactor</strong>.</p>
 <p><img src="img/lab2s104.png" alt=""></p>
-<p>The opening project perspective is shown below, with the <em>content_donate</em> layout open in the visual designer:</p>
+<p>Do the same for <strong><em>activity_main</em></strong> i.e. rename this file to <strong><em>activity_donate</em></strong></p>
+<p>and also our menu <strong><em>menu_main</em></strong> needs to be renamed to <strong><em>menu_donate</em></strong>, like so</p>
 <p><img src="img/lab2s105.png" alt=""></p>
-<p>The project will look like this</p>
+<p>The last file we need to rename is the <strong><em>MainActivity</em></strong> activity class so rename that to <strong><em>Donate</em></strong>, like so</p>
 <p><img src="img/lab2s106.png" alt=""></p>
-<p>It is important to become familiar with the structure and purpose of the three panes surrounding the Donation &#39;canvas&#39;:</p>
-<h2>Pallette:</h2>
+<p>The project will/should now look like this</p>
 <p><img src="img/lab2s107.png" alt=""></p>
-<h2>Outline</h2>
-<p><img src="img/lab2s108.png" alt=""></p>
-<h2>Properties</h2>
-<p><img src="img/lab2s109.png" alt=""></p>
-<p>These views are closely related - and you will need to monitor the information displayed there continually as you evolve the appearance of your activities screens.</p>
-<p>Also, take a quick look at your <b>build.gradle</b> file to see the configuration and dependencies of your app.</p>
-<p>NOTE : The version Numbers may differ depending on the API level you chose initially.</p>
-<p><img src="img/lab2s110.png" alt=""></p>
+<p>You should probably run your app now too, just to confirm your emulator is configured correctly and your project builds as expected.</p>
 
           </div>
         
@@ -256,30 +252,23 @@ html, body {
 </ul>
 <p>So, for this lab, our objective is to produce an Android App that looks something like this:</p>
 <p><img src="img/completeappv1.png" alt=""></p>
-<p>In your <b>content_donate.xml</b>, delete the current &#39;Hello World&#39; text, and drag and drop a new &#39;LargeText&#39; form widget onto the canvas, and &#39;stretch&#39; the widget to fill the canvas (like below). Look closely at the following:</p>
+<p>In your <strong><em>content_donate.xml</em></strong>, delete the current &#39;Hello World&#39; text, and drag and drop a new &#39;TextView&#39; form widget onto the canvas, and &#39;anchor&#39; the widget. Next, click on the &#39;grey line&#39; on the right hand side of the &#39;text&#39; property...</p>
 <p><img src="img/lab2s201.png" alt=""></p>
-<p>Now, Double-Click the widget and you will be presented with the following:</p>
+<p>and you will be presented with a list of all the current properties in the project.</p>
+<p>Now, Select <strong>&#39;Add new resource&#39;</strong> ...</p>
 <p><img src="img/lab2s202.png" alt=""></p>
-<p>Select the elipse (on the right hand side, indicated below)</p>
+<p>and you will be presented with the following:</p>
+<p>Then select <strong>&#39;New string Value&#39;</strong> ..</p>
 <p><img src="img/lab2s203.png" alt=""></p>
-<p>and you will be presented with the Resources Menu</p>
+<p>and you will be presented with the Resources Menu to add a new string value.</p>
 <p><img src="img/lab2s204.png" alt=""></p>
-<p>Select a &#39;New Resource-&gt;New String Value, and fill in the values as below</p>
+<p>Name your new resource as below and we will get our <strong>TextView</strong> updated with the resource.</p>
 <p><img src="img/lab2s205.png" alt=""></p>
-<p>Double-Click the widget again and enter <b>donteTitle</b> for the <b>id</b> and hit return.</p>
-<p><img src="img/lab2s205a.png" alt=""></p>
-<p>Once completed, you&#39;ll have something like this</p>
-<p><img src="img/lab2s206.png" alt=""></p>
-<p>Note carefully the following features:</p>
-<ul>
-<li>the guides tying the text to the left, top and right corner</li>
-<li>in Outline - the name of the control has been changed from a default to &#39;donateTitle&#39;.</li>
-<li>in Properties - check the value for &#39;text&#39; and notice we have a string reference linking to our <b>strings.xml</b> (below)</li>
-</ul>
+<p>Once completed, you&#39;re <strong><em>strings.xml</em></strong> should be something like this</p>
 <p><img src="img/lab2s207.png" alt=""></p>
 <p>Locate the following two files and inspect them closely:</p>
 <h2>res/layout/content_dontate.xml</h2>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -313,17 +302,17 @@ html, body {
 
 &lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
 <h2>res/values/strings.xml</h2>
-<pre><code>&lt;resources&gt;
+<pre><code class="lang-xml">&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
     &lt;string name=&quot;donateTitle&quot;&gt;Welcome Homer&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
 <p>Note the relationship between &#39;donateTitle&#39; in both files.</p>
-<p>Bring in the following string into the donate activity now - (medium text) - and follow the same procedure as above. The designer should look like this:</p>
+<p>Do the same for another <strong>TextView</strong> and follow the same procedure as above. The designer should look like this:</p>
 <p><img src="img/lab2s208.png" alt=""></p>
 <p>and our XML files will look something like this:</p>
 <h2>content_dontate.xml</h2>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -377,12 +366,14 @@ html, body {
 
 &lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
 <h2>strings.xml</h2>
-<pre><code>&lt;resources&gt;
+<pre><code class="lang-xml">&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
     &lt;string name=&quot;donateTitle&quot;&gt;Welcome Homer&lt;/string&gt;
     &lt;string name=&quot;donateSubtitle&quot;&gt;Please Give Generously&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
+<p>If you run the app, you should get something like this (Colours may be different)</p>
+<p><img src="img/lab2s208a.png" alt=""></p>
 
           </div>
         
@@ -392,7 +383,7 @@ html, body {
 <p><img src="img/lab2s301.png" alt=""></p>
 <p>Following a similar procedure as in the previous step, rename the button and add an id, both called <b>donateButton</b> If all goes as expected, your xml files should be like this:</p>
 <h2>content_donate.xml</h2>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -463,7 +454,7 @@ html, body {
 
 &lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
 <h2>strings.xml</h2>
-<pre><code>&lt;resources&gt;
+<pre><code class="lang-xml">&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
     &lt;string name=&quot;donateTitle&quot;&gt;Welcome Homer&lt;/string&gt;
@@ -472,7 +463,7 @@ html, body {
 &lt;/resources&gt;</code></pre>
 <p>If there is a deviation from the above - retrace your steps (delete the button) until you can match the above.</p>
 <p>We can now switch our attention to the <strong>Donate</strong> Activity class :</p>
-<pre><code>package ie.app;
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -526,20 +517,20 @@ public class Donate extends AppCompatActivity {
 }</code></pre>
 <p>For any &#39;controls&#39; a user can interact with we usually find it useful to associate a class member with that object. Currently we only have one - a Button. The text fields we don&#39;t consider &#39;interactive&#39; as such, so we will not include those.</p>
 <p>Insert the following new field into the class:</p>
-<pre><code>  private Button donateButton;</code></pre>
+<pre><code class="lang-java">  private Button donateButton;</code></pre>
 <p>The class will have to be imported. The class name will always match the name in the Palette:</p>
 <p><img src="img/lab2s302.png" alt=""></p>
 <p>We are free to call the variable anything we like. However, in order to keep confusion to a minimum, always call the variable by the same name you used in the Outline view:</p>
 <p><img src="img/lab2s303.png" alt=""></p>
 <p>In <strong><em>onCreate()</em></strong> - we need to initialise this variable:</p>
-<pre><code>    donateButton = (Button) findViewById(R.id.donateButton);</code></pre>
+<pre><code class="lang-java">    donateButton = findViewById(R.id.donateButton);</code></pre>
 <p>We might also add a logging message so we can have some feedback as the app launches:</p>
-<pre><code>    if (donateButton != null)
+<pre><code class="lang-java">    if (donateButton != null)
         {
             Log.v(&quot;Donate&quot;, &quot;Really got the donate button&quot;);
         }</code></pre>
 <p>This is the complete activity class:</p>
-<pre><code>package ie.app;
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -572,7 +563,7 @@ public class Donate extends AppCompatActivity {
             }
         });
 
-        donateButton = (Button) findViewById(R.id.donateButton);
+        donateButton = findViewById(R.id.donateButton);
 
         if (donateButton != null)
         {
@@ -630,14 +621,14 @@ public class Donate extends AppCompatActivity {
 </ul>
 <p>(note the last three segments match the package name). Open this page now. Read just as far as the &quot;Button Style&quot; heading. There seems to be two ways of learning when an button event occurs. The first method is using the event handler/listener - but a second easier method is also available.</p>
 <p>Try this now. Bring in a new method into the <strong>Donate</strong> class:</p>
-<pre><code>  public void donateButtonPressed (View view)
+<pre><code class="lang-java">  public void donateButtonPressed (View view)
   {
     Log.v(&quot;Donate&quot;, &quot;Donate Pressed!&quot;);
    }</code></pre>
 <p>Then, edit the <b>content_donate.xml</b> file - and add a new &#39;onClick&#39; <em>attribute</em> into the Button xml fragment:</p>
-<pre><code>android:onClick=&quot;donateButtonPressed&quot;</code></pre>
+<pre><code class="lang-xml">android:onClick=&quot;donateButtonPressed&quot;</code></pre>
 <p>You can also add <b>donateButtonPressed</b> to the &#39;onClick&#39; attribute in Design View. And you end up with something like this:</p>
-<pre><code>&lt;Button
+<pre><code class="lang-xml">&lt;Button
       android:id=&quot;@+id/donateButton&quot;
       android:layout_width=&quot;wrap_content&quot;
       android:layout_height=&quot;wrap_content&quot;
@@ -1041,16 +1032,16 @@ public class Donate extends AppCompatActivity {
             }
         });
 
-        donateButton = (Button) findViewById(R.id.donateButton);
+        donateButton = findViewById(R.id.donateButton);
 
         if (donateButton != null)
         {
             Log.v(&quot;Donate&quot;, &quot;Really got the donate button&quot;);
         }
 
-        paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-        progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-        amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);
+        paymentMethod = findViewById(R.id.paymentMethod);
+        progressBar   = findViewById(R.id.progressBar);
+        amountPicker  = findViewById(R.id.amountPicker);
 
         amountPicker.setMinValue(0);
         amountPicker.setMaxValue(1000);

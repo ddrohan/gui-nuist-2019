@@ -240,12 +240,12 @@
     "properties" : {},
   
   "type" : "talk",
-  "title" : "Application Design ",
-  "img" : "app-design.png",
+  "title" : "app.design",
+  "img" : "",
   "videoid" : "none",
-  "objectives" : "<p>This simple application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app.</p>",
+  "objectives" : "",
   "folder" : "talk-7-app-design",
-  "link" : "app-design.pdf",
+  "link" : "app.design.pdf",
   "los": [
    ]
 
@@ -573,6 +573,22 @@
    ]
 
     } 
+   ]
+
+  },
+ {
+    
+  
+    "properties" : {},
+  
+  "type" : "archive",
+  "title" : "",
+  "img" : "",
+  "videoid" : "",
+  "objectives" : "",
+  "folder" : "",
+  "link" : "error: missing archive",
+  "los": [
    ]
 
   }
