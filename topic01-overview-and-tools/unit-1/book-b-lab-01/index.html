@@ -671,11 +671,8 @@ import android.widget.ProgressBar;</code></pre>
 <li><a href="http://developer.android.com/reference/android/widget/NumberPicker.html">http://developer.android.com/reference/android/widget/NumberPicker.html</a></li>
 </ul>
 <p>Note this time we have gone to the Activity class before actually creating the controls. We should do this now - and remember to use the same names (for the IDs) as we create the controls.</p>
-<p><img src="img/lab2s503.png" alt=""></p>
-<p>and</p>
-<p><img src="img/lab2s504.png" alt=""></p>
-<p>Getting the layout +id names as shown above may take some practice. However, it is an essential skill to get on top of, even it it takes a lot of trial and error.</p>
-<p>For reference purposes (try to do it yourself first!), these are the relevant generated xml files:</p>
+<h2>NB - The Latest Version of Android has deprecated the <strong>NumberPicker</strong> Class so I would strongly recommend that you <strong>&#39;Copy &amp; Paste&#39;</strong> the xml for the <strong><em>content_donate.xml</em></strong> from below - Just replace what you currently have with the following in your <strong><em>content_donate.xml</em></strong> Make sure you do the same for <strong><em>strings.xml</em></strong></h2>
+<p>For reference purposes these are the relevant generated xml files:</p>
 <h2>content_donate.xml</h2>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
@@ -965,7 +962,7 @@ public class Donate extends AppCompatActivity {
 <li><a href="http://developer.android.com/reference/android/widget/RadioGroup.html#getCheckedRadioButtonId(">getCheckedRadioButtonId()</a>)</li>
 </ul>
 <p>This is a revised version of <strong><em>donateButtonPressed()</em></strong></p>
-<pre><code>  public void donateButtonPressed (View view)
+<pre><code class="lang-java">  public void donateButtonPressed (View view)
   {
     int amount = amountPicker.getValue();
     int radioId = paymentMethod.getCheckedRadioButtonId();
@@ -982,13 +979,13 @@ public class Donate extends AppCompatActivity {
    }</code></pre>
 <p>Run it now and verify we are getting the correct logs.</p>
 <p>We can simplify it somewhat by reducing the if statement to a single line:</p>
-<pre><code>    String method = radioId == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;</code></pre>
+<pre><code class="lang-java">    String method = radioId == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;</code></pre>
 <p>This is the Java ternary operator:</p>
 <ul>
 <li><a href="http://marxsoftware.blogspot.ie/2010/09/how-i-learned-to-stop-worrying-and-love.html">http://marxsoftware.blogspot.ie/2010/09/how-i-learned-to-stop-worrying-and-love.html</a></li>
 </ul>
 <p>This is the complete activity class so far:</p>
-<pre><code>package ie.app;
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -1090,19 +1087,19 @@ public class Donate extends AppCompatActivity {
 <li><a href="http://developer.android.com/reference/android/widget/ProgressBar.html#setProgress(int)">http://developer.android.com/reference/android/widget/ProgressBar.html#setProgress(int)</a></li>
 </ul>
 <p>First we would need to equip our activity with the ability to remember the donation amounts:</p>
-<pre><code>  private int totalDonated = 0;</code></pre>
+<pre><code class="lang-java">  private int totalDonated = 0;</code></pre>
 <p>Lets set max progress bar to 10000 in <strong><em>onCreate()</em></strong>:</p>
-<pre><code>    progressBar.setMax(10000);</code></pre>
+<pre><code class="lang-java">    progressBar.setMax(10000);</code></pre>
 <p>.. and set the progress in <strong><em>donateButtonPressed()</em></strong>:</p>
-<pre><code>    totalDonated = totalDonated + amount;
+<pre><code class="lang-java">    totalDonated = totalDonated + amount;
     progressBar.setProgress(totalDonated);
 
     Log.v(&quot;Donate&quot;, &quot;Donate Pressed! with amount &quot; + amount + &quot;, method: &quot; + method);
     Log.v(&quot;Donate&quot;, &quot;Current total &quot; + totalDonated);</code></pre>
 <p>Try this now and observe the progress bar and logCat</p>
 <p><img src="img/lab2s801.png" alt=""></p>
-<p>This is the complete class so far:</p>
-<pre><code>package ie.app;
+<p>This is the complete <strong>Donate</strong> class so far:</p>
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -1143,16 +1140,16 @@ public class Donate extends AppCompatActivity {
             }
         });
 
-        donateButton = (Button) findViewById(R.id.donateButton);
+        donateButton = findViewById(R.id.donateButton);
 
         if (donateButton != null)
         {
             Log.v(&quot;Donate&quot;, &quot;Really got the donate button&quot;);
         }
 
-        paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-        progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-        amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);
+        paymentMethod = findViewById(R.id.paymentMethod);
+        progressBar   = findViewById(R.id.progressBar);
+        amountPicker  = findViewById(R.id.amountPicker);
 
         amountPicker.setMinValue(0);
         amountPicker.setMaxValue(1000);
@@ -1195,7 +1192,7 @@ public class Donate extends AppCompatActivity {
     }
 }</code></pre>
 <p>Here is another version of exactly the same class:</p>
-<pre><code>package ie.app;
+<pre><code class="lang-java">package ie.app;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -1236,16 +1233,16 @@ public class Donate extends AppCompatActivity {
             }
         });
 
-        donateButton = (Button) findViewById(R.id.donateButton);
+        donateButton = findViewById(R.id.donateButton);
 
         if (donateButton != null)
         {
             Log.v(&quot;Donate&quot;, &quot;Really got the donate button&quot;);
         }
 
-        paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-        progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-        amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);
+        paymentMethod = findViewById(R.id.paymentMethod);
+        progressBar   = findViewById(R.id.progressBar);
+        amountPicker  = findViewById(R.id.amountPicker);
 
         amountPicker.setMinValue(0);
         amountPicker.setMaxValue(1000);
@@ -1286,17 +1283,17 @@ public class Donate extends AppCompatActivity {
 <p>Examine them carefully. What are the differences? Why make these changes?</p>
 <p>Note also the careful attention to spacing and alignment in the code. Not just correct indentation, but continual attention to structuring each method carefully, removing duplication and unnecessary code and formatting/aligning the declarations and assignment statements in a table like structure:</p>
 <p>Visible here:</p>
-<pre><code>  private RadioGroup   paymentMethod;
+<pre><code class="lang-java">  private RadioGroup   paymentMethod;
   private ProgressBar  progressBar;
   private NumberPicker amountPicker;
 
   private int          totalDonated = 0;</code></pre>
 <p>and here:</p>
-<pre><code>    paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
-    progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
-    amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);</code></pre>
+<pre><code class="lang-java">    paymentMethod = findViewById(R.id.paymentMethod);
+    progressBar   = findViewById(R.id.progressBar);
+    amountPicker  = findViewById(R.id.amountPicker);</code></pre>
 <p>and here:</p>
-<pre><code>    totalDonated  = totalDonated + amountPicker.getValue();
+<pre><code class="lang-java">    totalDonated  = totalDonated + amountPicker.getValue();
     String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;</code></pre>
 <p>Android code can become very verbose and complex. Carefully formatting is essential if you are not to be overwhelmed.</p>
 
@@ -1320,7 +1317,7 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s903.png" alt=""></p>
 <p>If the number picker is set to zero, then attempt to get a number from the text view.</p>
 <p>Here is a hint (a version of <strong><em>donatButonPressed()</em></strong> that does what we want):</p>
-<pre><code>  public void donateButtonPressed (View view)
+<pre><code class="lang-java">  public void donateButtonPressed (View view)
   {
     String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;
     progressBar.setProgress(totalDonated);
@@ -1338,9 +1335,9 @@ public class Donate extends AppCompatActivity {
 <h2>Exercise 2:</h2>
 <p>Revise the app such that when the target is achieved (10000) - then no more donations accepted, and the user is made aware of this.</p>
 <p>Hint - here is how you can display a simple alert:</p>
-<pre><code>      Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT).show();</code></pre>
+<pre><code class="lang-java">      Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT).show();</code></pre>
 <h2>Exercise 3:</h2>
-<p>Modify the colour scheme for our widgets..</p>
+<p>Modify the colour scheme for our widgets (if you haven&#39;t done so already).</p>
 <p>You will notice that the Floating Action Button, the Radio Buttons, the Progress Bar etc, are all a kind of pink - not really in line with our current colour scheme.</p>
 <p>Hint - have a look at your <b>colors.xml</b></p>
 <p><img src="img/lab2s904.png" alt=""></p>
