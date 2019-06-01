@@ -216,27 +216,31 @@ html, body {
 </ol>
 <p>And don&#39;t forget to update your <strong>app_name</strong> resource in your <strong>strings.xml</strong>.</p>
 <p>We should also take this opportunity to change the name of the &#39;ie.app&#39; package to &#39;ie.app.activities&#39;, as we will be introducing other packages later on.</p>
-<p>So create a new package called <strong>ie.app.activities</strong> (in the <strong>main</strong> folder)</p>
-<p><img src="img/lab3s101.png" alt=""></p>
-<p>and drag in your <b>Donate.java</b> into this new package. You can delete the empty package (if Android Studio hasn&#39;t done it already)</p>
-<p>Do the same for the <b>ApplicationTest</b> class.</p>
-<p>Next, check that the import statement in <strong>Donate.java</strong> is as follows:</p>
+<p>So first, create a new package called <strong>ie.app.activities</strong> (in the <strong>main</strong> folder)</p>
+<p><img src="img/01.png" alt=""></p>
+<p><img src="img/02a.png" alt=""></p>
+<p><img src="img/02b.png" alt=""></p>
+<p>and drag in your <strong>Donate.java</strong> into this new package.</p>
+<p><img src="img/04.png" alt=""></p>
+<p>You can delete the empty package (if Android Studio hasn&#39;t done it already)</p>
+<p>Now, do the same for the <strong>ApplicationTest</strong> class and the <strong>ExampleUnitTest</strong> class.</p>
+<p>Next, check that the <strong>import</strong> statement in <strong>Donate.java</strong> is as follows:</p>
 <pre><code class="lang-java">import android.widget.Toast;
 
 import ie.app.R;
 
 public class Donate extends AppCompatActivity {
   ...</code></pre>
-<p><img src="img/lab3s102.png" alt=""></p>
-<p>So make sure your project structure looks like the above before continuing.</p>
-<p>Also, don&#39;t forget to change the <b>app_name</b> string resource in your strings.xml.</p>
+<p>So make sure your project structure looks like below before continuing</p>
+<p><img src="img/03.png" alt=""></p>
+<p>Also, don&#39;t forget to change the <strong>app_name</strong> string resource in your <strong>strings.xml</strong>.</p>
 <p>Whether you&#39;ve downloaded the Starter App or continued on with your own app, you should still &quot;Clean&quot; your project at this stage &quot;Build-&gt;Clean Project&quot;, and then Rebuild &amp; finally run your app, to make sure everything is ok.</p>
 
           </div>
         
           <div class="ui tab segment lab" data-tab="02">
             <h1>Working with Menus</h1>
-<p>Open <b>res/values/strings.xml</b> and introduce a new String resource like this:</p>
+<p>Open <strong>res/values/strings.xml</strong> and introduce a new String resource like this:</p>
 <pre><code class="lang-xml">&lt;string name=&quot;menuReport&quot;&gt;Report&lt;/string&gt;</code></pre>
 <p>We have a menu resource called <strong>menu_donate.xml</strong> in the <strong>res/menu</strong> folder. Modify this file by adding this new menu item:</p>
 <pre><code class="lang-xml">  &lt;item
@@ -265,53 +269,17 @@ public class Donate extends AppCompatActivity {
             <h1>Reports Activity</h1>
 <p>Before we start to design a new activity, Add a string resource in <strong>res/values/strings.xml</strong>:</p>
 <pre><code class="lang-xml">&lt;string name=&quot;reportTitle&quot;&gt;Report&lt;/string&gt;</code></pre>
-<p>Design a new layout called <strong>activity_report</strong>. Do this by locating the <strong>res/layout</strong> folder and selecting &quot;New-&gt;Layout resource file&quot;, like so:</p>
-<p><img src="img/lab3s301.png" alt=""></p>
-<p>You can choose all the defaults for this layout.</p>
-<p><img src="img/lab3s302.png" alt=""></p>
-<p>&quot;Morph&quot; our layout from Linear to Relative, like so,</p>
-<p><img src="img/lab3s303.png" alt=""></p>
-<p>and build a layout similar to the following:</p>
-<p><img src="img/lab3s304.png" alt=""></p>
-<p>This is the layout file itself, if you just want to overwrite the xml:</p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-    android:id=&quot;@+id/relativeLayout2&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:orientation=&quot;vertical&quot;
-    tools:layout_editor_absoluteY=&quot;81dp&quot;&gt;
-
-    &lt;TextView
-        android:id=&quot;@+id/reportTitle&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:layout_marginBottom=&quot;8dp&quot;
-        android:layout_marginEnd=&quot;8dp&quot;
-        android:layout_marginStart=&quot;8dp&quot;
-        android:layout_marginTop=&quot;8dp&quot;
-        android:text=&quot;@string/reportTitle&quot;
-        android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot;
-        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
-        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
-        app:layout_constraintHorizontal_bias=&quot;0.026&quot;
-        app:layout_constraintStart_toStartOf=&quot;parent&quot;
-        app:layout_constraintTop_toTopOf=&quot;parent&quot;
-        app:layout_constraintVertical_bias=&quot;0.017&quot; /&gt;
-
-    &lt;ListView
-        android:id=&quot;@+id/reportList&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:layout_marginTop=&quot;58dp&quot;
-        app:layout_constraintStart_toStartOf=&quot;parent&quot;
-        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
-&lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
-<p>Introduce a new &quot;Empty Activity&quot; into <strong>ie.app.activities</strong> to render this activity - but be careful <strong>NOT</strong> to &#39;<strong><em>Generate Layout File</em></strong>&#39; (as we have one already):</p>
-<p><img src="img/lab3s305.png" alt=""></p>
-<p>and replace it with the following:</p>
+<p>Create a new <strong> Empty Activity</strong> in the <strong>ie.app.activities</strong> package like so :</p>
+<p><img src="img/05.png" alt=""></p>
+<p>and name it as below :</p>
+<p><img src="img/06.png" alt=""></p>
+<p>If you wish, you can create it from the Gallery</p>
+<p><img src="img/07.png" alt=""></p>
+<p>and</p>
+<p><img src="img/08.png" alt=""></p>
+<p>once created, your project should look like</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Now, open up your <strong>Report.java</strong> and replace it with the following:</p>
 <pre><code class="lang-java">package ie.app.activities;
 
 import android.support.v7.app.AppCompatActivity;
