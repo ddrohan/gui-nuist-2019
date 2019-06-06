@@ -127,6 +127,10 @@ html, body {
           05
         </a>
       
+        <a class="item" data-tab="06">
+          06
+        </a>
+      
         <a class="item" data-tab="Exercise">
           Exercise
         </a>
@@ -381,6 +385,91 @@ public class Donation
           </div>
         
           <div class="ui tab segment lab" data-tab="03">
+            <h1>Refactored Report - Displaying our Donations</h1>
+<p>Before we rework the <strong>Report</strong> Layout to render the actual donations held in the <strong>Base</strong> class list in a custom format, we will first display these donations to the LogCat and then on the actual layout, albeit in a default format.</p>
+<h2>Displaying our Donations to the LogCat</h2>
+<p>First, add the following to your <strong>donationButtonPressed</strong> method, in a suitable location.</p>
+<pre><code class="lang-java">Log.v(&quot;Donate&quot;,&quot;Current Donations List is : &quot; + donations);</code></pre>
+<p>Run your app to confirm you now see the following after adding some donations :</p>
+<p><img src="img/01.png" alt=""></p>
+<p>You&#39;ll notice the donations are displayed in an unusual format - this is the actual address of the donation in memory, so to fix this we need to add a <strong>toString()</strong> method to our <strong>Donation</strong> Model, like so:</p>
+<p>Select/Click on the Class (Donation) and choose Code-&gt;Generate</p>
+<p><img src="img/02.png" alt=""></p>
+<p>then Select <strong>toString()</strong></p>
+<p><img src="img/03.png" alt=""></p>
+<p>and finally the properties to display</p>
+<p><img src="img/04.png" alt=""></p>
+<p>Our <strong>Donation</strong> Class now looks like</p>
+<pre><code class="lang-java">public class Donation
+{
+  public int    amount;
+  public String method;
+
+  public Donation (int amount, String method)
+  {
+    this.amount = amount;
+    this.method = method;
+  }
+
+  @Override
+  public String toString() {
+    return &quot;Donation{&quot; +
+        &quot;amount=&quot; + amount +
+        &quot;, method=&#39;&quot; + method + &#39;\&#39;&#39; +
+        &#39;}&#39;;
+  }
+}</code></pre>
+<p>Run your app again, add a few donations, and confirm you now get the following :</p>
+<p><img src="img/05.png" alt=""></p>
+<h2>Displaying our Donations on Screen</h2>
+<p>This is achieved quite easily by making some simple modifications to our <strong>Report.java</strong> and specifically, the <strong><em>ArrayAdapter</em></strong>.</p>
+<p>Replace your existing <strong>Report.java</strong> with the following :</p>
+<pre><code class="lang-java">public class Report extends Base
+{
+    ListView listView;
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_report);
+
+        listView = findViewById(R.id.reportList);
+        ArrayAdapter&lt;Donation&gt; adapter = new ArrayAdapter&lt;&gt;(this,  android.R.layout.simple_list_item_1, donations);
+        listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_donate, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menuDonate : startActivity (new Intent(this, Donate.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}</code></pre>
+<p>run your app again, and confirm you get something like the following :</p>
+<p><img src="img/06.png" alt=""></p>
+<p>Pay particular attention to the following lines of code</p>
+<pre><code class="lang-java">listView = findViewById(R.id.reportList);
+ArrayAdapter&lt;Donation&gt; adapter = new ArrayAdapter&lt;&gt;(this,  android.R.layout.simple_list_item_1, donations);
+listView.setAdapter(adapter);</code></pre>
+<p>this is how the <strong><em>donations</em></strong> list is rendered on the screen.</p>
+<p>Here&#39;s the solution so far - <a href="archives/Donation.3.0.1.zip">Donation.3.0.1</a></p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
             <h1>Refactored Report - New &#39;Layout&#39;</h1>
 <p>We now rework the <strong>Report</strong> Layout to render the actual donations - held in the <strong>Base</strong> class list.</p>
 <p>First some layout additions. Include these new string resources in <strong>strings.xml</strong></p>
@@ -421,7 +510,7 @@ public class Donation
 
           </div>
         
-          <div class="ui tab segment lab" data-tab="04">
+          <div class="ui tab segment lab" data-tab="05">
             <h1>Refactored Report - New &#39;Class&#39;</h1>
 <p>Finally, rework the <strong>Report</strong> class to remove the hard coded values - and use a different &#39;<strong>adapter</strong>&#39;</p>
 <pre><code class="lang-java">public class Report extends Base
@@ -497,7 +586,7 @@ public class Donation
 
           </div>
         
-          <div class="ui tab segment lab" data-tab="05">
+          <div class="ui tab segment lab" data-tab="06">
             <h1>Refactored Menu - New &#39;Event Handling&#39;</h1>
 <p>If you recall from Step 01, our <strong>Base</strong> class has 3 particular methods that we haven&#39;t made use of - yet</p>
 <pre><code class="lang-java">  public void settings(MenuItem item)
